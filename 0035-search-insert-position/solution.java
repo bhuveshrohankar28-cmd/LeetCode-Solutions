@@ -1,19 +1,14 @@
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        int low = 0;
-        int high = nums.length; // 1. Boundary: length, not length - 1
-
-        while (low < high) {    // 2. Loop: while low < high
-            int mid = low + (high - low) / 2;
-
-            if (nums[mid] < target) {
-                low = mid + 1;  // Target is to the right
-            } else {
-                high = mid;     // Target is here or to the left (The "Squeeze")
-            }
+        int n = nums.length;
+        int start = 0;
+        int end = n - 1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) return mid;
+            if (nums[mid] > target) end=mid - 1;
+             else start = mid+1;
         }
-
-        // 3. Result: low and high meet at the insertion point
-        return low; 
+        return start;
     }
 }
