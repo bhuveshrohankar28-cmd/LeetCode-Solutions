@@ -1,8 +1,14 @@
 class Solution {
     public char findTheDifference(String s, String t) {
-        int ans=0;
-        for(char ele:s.toCharArray()) ans=ans^ele;
-        for(char ele:t.toCharArray()) ans=ans^ele;
-        return (char)ans;
+        int charSum = 0;
+        // Loop through the longer string 't'
+        for (int i = 0; i < t.length(); i++) {
+            charSum += t.charAt(i);
+        }
+        // Loop through the shorter string 's'
+        for (int i = 0; i < s.length(); i++) {
+            charSum -= s.charAt(i);
+        }
+        return (char) charSum;
     }
 }
