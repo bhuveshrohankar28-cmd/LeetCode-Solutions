@@ -1,16 +1,26 @@
 class Solution {
-    public int heightChecker(int[] heights) {
-        int[] freqArr = new int[101];
-        for(int ele:heights){
-            freqArr[ele]++;
+    public int heightChecker(int[] arr) {
+        int n = arr.length;
+        int[] expected = arr.clone();
+        int count = 0;
+        for (int i = 0; i < n - 1; i++) {
+            int minIdx = i;
+            for (int j = i + 1; j < n; j++) {
+                if (expected[j] < expected[minIdx]) {
+                    minIdx = j;
+                }
+            }
+
+            int temp = expected[minIdx];
+            expected[minIdx] = expected[i];
+            expected[i] = temp;
         }
-        int currentEle=0;
-        int count=0;
-        for(int ele:heights){
-            while(freqArr[currentEle]==0) currentEle++;
-            if(currentEle!=ele) count++;
-            freqArr[currentEle]--;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != expected[i])
+                count++;
         }
         return count;
     }
+
 }
+
