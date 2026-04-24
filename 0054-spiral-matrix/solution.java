@@ -1,35 +1,33 @@
 class Solution {
     public List<Integer> spiralOrder(int[][] matrix) {
-        ArrayList<Integer> ans = new ArrayList<>();
-        int m = matrix.length, n = matrix[0].length;
-        int firstRow = 0, lastRow = m - 1, firstCol = 0, lastCol = n - 1;
+        List<Integer> list = new ArrayList<>();
+        int firstRow = 0, firstCol = 0;
+        int lastRow = matrix.length-1, lastCol = matrix[0].length-1;
         while (lastRow >= firstRow && lastCol >= firstCol) {
-            for (int i = firstCol; i <= lastCol; i++) {//right
-                ans.add(matrix[firstRow][i]);
+            for (int i = firstCol; i <= lastCol; i++) {
+                list.add(matrix[firstRow][i]);
             }
             firstRow++;
             if (firstRow > lastRow || firstCol > lastCol)
                 break;
             for (int i = firstRow; i <= lastRow; i++) {
-                ans.add(matrix[i][lastCol]);
+                list.add(matrix[i][lastCol]);
             }
             lastCol--;
             if (firstRow > lastRow || firstCol > lastCol)
                 break;
-
-            for (int i = lastCol; i >= firstCol; i--) {//right
-                ans.add(matrix[lastRow][i]);
+            for (int i = lastCol; i >= firstCol; i--) {
+                list.add(matrix[lastRow][i]);
             }
             lastRow--;
             if (firstRow > lastRow || firstCol > lastCol)
                 break;
-
             for (int i = lastRow; i >= firstRow; i--) {
-                ans.add(matrix[i][firstCol]);
+                list.add(matrix[i][firstCol]);
             }
             firstCol++;
-        }
-        return ans;
 
+        }
+        return list;
     }
 }
