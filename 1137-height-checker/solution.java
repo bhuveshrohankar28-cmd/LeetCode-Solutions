@@ -1,15 +1,16 @@
 class Solution {
-    public int heightChecker(int[] arr) {
-        int[] freqArr =new int[101];
-        for(int ele:arr) freqArr[ele]++;
-        int currEle=0;
-        int result=0;
-        for(int ele:arr){
-            while(freqArr[currEle]==0) currEle++;
-            if(currEle!=ele) result++;
-            freqArr[currEle]--;
-        }return result;
+    public int heightChecker(int[] heights) {
+        int[] freqArr = new int[101];
+        for(int ele:heights){
+            freqArr[ele]++;
+        }
+        int currentEle=0;
+        int count=0;
+        for(int ele:heights){
+            while(freqArr[currentEle]==0) currentEle++;
+            if(currentEle!=ele) count++;
+            freqArr[currentEle]--;
+        }
+        return count;
     }
-
 }
-
