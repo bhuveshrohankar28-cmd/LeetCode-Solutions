@@ -1,11 +1,11 @@
 class Solution {
     public int[] sumZero(int n) {
         int[] arr=new int[n];
-        int idx=0;
-        if(n%2!=0) arr[idx++] = 0;
-        for(int i=1;i<=n/2;i++){
-            arr[idx++]=i;
-            arr[idx++]=-i;
+        int i=0;
+        if(n%2!=0) arr[i++]=0;
+        for(int idx=1;idx<=n/2;idx++){
+            arr[i++]=idx;
+            arr[i++]=-idx;
         }return arr;
     }
 }
