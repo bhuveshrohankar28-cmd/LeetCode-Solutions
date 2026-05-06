@@ -7,9 +7,11 @@ class Solution {
         while(i<s.length()){
             int j=i;
             while(j<s.length()&&s.charAt(i)==s.charAt(j)) j++;
-                ans.append(j-i);
-                ans.append(s.charAt(i));
-                i=j;
+            int len=j-i;
+            ans.append(len);
+            ans.append(s.charAt(i));
+            i=j;
+
         }return ans.toString();
     }
 }
