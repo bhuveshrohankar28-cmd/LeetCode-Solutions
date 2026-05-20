@@ -1,5 +1,5 @@
 class Solution {
-    public int searchInsert(int[] nums, int target) {
+    public int searchInsert(int[] nums, int target) {//O(N)
         int low=0,high=nums.length;
         while(low<high){
             int mid=low+(high-low)/2;
