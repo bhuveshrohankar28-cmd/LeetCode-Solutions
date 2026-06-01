@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public int longestConsecutive(int[] nums) {
         int max = 0;
   
