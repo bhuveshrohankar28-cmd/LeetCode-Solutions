@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public int compress(char[] chars) {
         int write = 0; // Where we write the result
         int i = 0;     // Start of the current group
