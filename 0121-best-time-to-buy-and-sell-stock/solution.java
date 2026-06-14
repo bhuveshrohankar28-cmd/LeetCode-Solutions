@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public int maxProfit(int[] prices) {
         int buy=-1,sell=-1,Xbuy= Integer.MAX_VALUE,Xprofit=0;
         for(int ele:prices){
