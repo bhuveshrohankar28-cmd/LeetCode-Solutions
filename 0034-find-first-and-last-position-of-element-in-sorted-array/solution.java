@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//
     public int[] searchRange(int[] nums, int target) {
         int low=0,high=nums.length-1;
         int start=-1,end=-1;
