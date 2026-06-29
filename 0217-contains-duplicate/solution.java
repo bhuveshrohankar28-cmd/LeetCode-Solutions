@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//a
     public boolean containsDuplicate(int[] nums) {
         int n=nums.length;
         Arrays.sort(nums);
