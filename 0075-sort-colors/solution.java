@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public void sortColors(int[] nums) {
         int n = nums.length;
         int left = 0, moving = 0, right = n - 1;
