@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public boolean isHappy(int n) {
         int slow = getNextNumber(n);
         int fast = getNextNumber(getNextNumber(n));
