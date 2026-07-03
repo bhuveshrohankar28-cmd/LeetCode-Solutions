@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//test
     public int lengthOfLongestSubstring(String s) {
         HashSet<Character> set = new HashSet<>();
         int maxCount = 0;
