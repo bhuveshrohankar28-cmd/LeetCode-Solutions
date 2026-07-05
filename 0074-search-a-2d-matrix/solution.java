@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public boolean searchMatrix(int[][] matrix, int target) {
         int rows=matrix.length,cols=matrix[0].length;
         int low=0,high=rows*cols-1;
