@@ -1,8 +1,8 @@
 name: Sync Leetcode
 on:
-  workflow_dispatch: # Allows you to trigger it manually
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *' # Runs automatically every night
+    - cron: '0 0 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,3 +15,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
+          commit-header: "Add solution"
