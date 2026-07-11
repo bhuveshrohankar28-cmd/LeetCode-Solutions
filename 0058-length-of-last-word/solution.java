@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public int lengthOfLastWord(String s) {
 
         int length = 0;
