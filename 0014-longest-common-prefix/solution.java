@@ -1,4 +1,4 @@
-class Solution {//agn
+class Solution {
     public String longestCommonPrefix(String[] strs) {
         Arrays.sort(strs);//O(N)
         String first=strs[0];
