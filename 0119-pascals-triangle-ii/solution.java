@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public List<Integer> getRow(int rowIndex) {
         List<Integer> ans =new ArrayList<>();//O(N)
         long current=1;
