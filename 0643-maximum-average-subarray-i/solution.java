@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public double findMaxAverage(int[] nums, int k) {
         long fSum=Long.MIN_VALUE;
         int n=nums.length;
