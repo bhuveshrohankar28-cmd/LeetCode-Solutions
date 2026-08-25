@@ -1,0 +1,23 @@
+class Solution {
+    public int subarraySum(int[] nums, int k) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int sum = 0;
+        int count = 0;
+        // Important: prefix sum 0 has appeared once
+        map.put(0, 1);
+
+        for (int i = 0; i < nums.length; i++) {
+
+            sum += nums[i];
+
+            // Check how many previous prefix sums
+            // make the current subarray sum equal to k
+            count += map.getOrDefault(sum - k, 0);
+
+            // Store frequency of current prefix sum
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+
+        return count;
+    }
+}
