@@ -1,14 +1,15 @@
-class Solution {//again
+class Solution {
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> arr=new ArrayList<>();
+        List<List<Integer>> ans = new ArrayList<>();
         for(int i=0;i<numRows;i++){
-            arr.add(new ArrayList<Integer>());
+            ans.add(new ArrayList<Integer>());
             for(int j=0;j<=i;j++){
-                if(j==0||j==i) arr.get(i).add(1);
+                if(j==0 ||j==i) ans.get(i).add(1);
                 else{
-                    arr.get(i).add(arr.get(i-1).get(j)+arr.get(i-1).get(j-1));
+                    ans.get(i).add(ans.get(i-1).get(j-1)+ans.get(i-1).get(j));
                 }
             }
-        }return arr;
+
+        }return ans;
     }
 }
