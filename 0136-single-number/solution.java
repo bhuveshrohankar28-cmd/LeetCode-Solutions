@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public int singleNumber(int[] nums) {
         int result=0;
         for(int ele:nums) result^=ele;
