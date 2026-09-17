@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public void nextPermutation(int[] nums) {
         int n = nums.length;
         int pivot = -1, justGrt = 0, i = 0;
