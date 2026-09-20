@@ -1,4 +1,4 @@
-class Solution {
+class Solution {//again
     public int maxProfit(int[] prices) {
         int profit = 0;
         int minCost = prices[0];
