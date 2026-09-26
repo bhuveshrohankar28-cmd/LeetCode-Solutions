@@ -1,12 +1,14 @@
 class Solution {
-    public int searchInsert(int[] nums, int target) {//O(N)
-        int low=0,high=nums.length;
-        while(low<high){
-            int mid=low+(high-low)/2;
+    public int searchInsert(int[] nums, int target) {
+        int low=0,high=nums.length-1, mid=0;
+        int ans=-1;
+        while(low<=high){
+             mid=low+(high-low)/2;
             if(nums[mid]==target) return mid;
-            if(nums[mid]< target)low=mid+1;
-            else high=mid;
-
-        }return high;
+            else if(nums[mid]>target) {
+                ans=mid;
+                high=mid-1;}
+            else low=mid+1;
+        }return low;
     }
 }
