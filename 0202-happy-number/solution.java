@@ -1,17 +1,14 @@
-class Solution {//again
+class Solution {
     public boolean isHappy(int n) {
-        int slow = getNextNumber(n);
-        int fast = getNextNumber(getNextNumber(n));
-        while (slow != fast) {
-            if (fast == 1)
-                return true;
-            slow = getNextNumber(slow);
-            fast = getNextNumber(getNextNumber(fast));
+        HashSet<Integer> set = new HashSet<>();
+        while (n != 1 && !set.contains(n)) {
+            set.add(n);
+            n = nextNum(n);
         }
-        return slow == 1;
+        return n == 1;
     }
 
-    public int getNextNumber(int n) {
+    public int nextNum(int n) {
         int sum = 0;
         while (n > 0) {
             int digit = n % 10;
@@ -21,3 +18,4 @@ class Solution {//again
         return sum;
     }
 }
+
